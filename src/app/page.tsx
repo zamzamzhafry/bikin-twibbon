@@ -28,17 +28,13 @@ export default function Home({ searchParams }: Readonly<Props>) {
       <div className="w-full md:w-1/2">
         <h1 className="text-[22px] sm:text-[36px] font-bold leading-[130%] mb-[18px]">
           <span className="text-primary-500 text-[40px] sm:text-[50px]">
-            HUT ke-79
+            Twibbon Maker
             <br />
           </span>{" "}
-          Nusantara Baru Indonesia Maju
+          Selamat Hari Raya Idul Fitri 1446H
         </h1>
         <p className="text-neutral-500 leading-[160%]">
-          Mari rayakan HUT RI ke-79 dengan semangat{" "}
-          <span className="text-primary-500">
-            Nusantara Baru Indonesia Maju
-          </span>
-          . Buat Twibbon kamu sekarang dan tunjukkan cinta untuk tanah air!
+          Buat twibbon untuk merayakan hari raya Idul Fitri 1446H. Upload foto kamu dan atur dengan zoom dan geser gambar.
         </p>
       </div>
       <RenderForm searchParams={searchParams} />

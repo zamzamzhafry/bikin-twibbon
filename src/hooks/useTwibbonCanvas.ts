@@ -183,9 +183,10 @@ export const useTwibbonCanvas = (): UseTwibbonHookRes => {
       hoverCursor: "pointer",
     });
 
+    // Set dimensions to 9:16 ratio
     const dimensions = isMd
-      ? { width: 500, height: 500 }
-      : { width: 300, height: 300 };
+      ? { width: 540, height: 960 } // Larger screen (portrait 9:16 ratio)
+      : { width: 270, height: 480 }; // Smaller screen (portrait 9:16 ratio)
     fabricCanvas.setDimensions(dimensions);
 
     return fabricCanvas;
@@ -208,9 +209,10 @@ export const useTwibbonCanvas = (): UseTwibbonHookRes => {
   useEffect(() => {
     fabricCanvas?.clear();
 
+    // Update recommendedSize to 9:16 ratio
     const size = isMd
-      ? { height: 500, width: 500 }
-      : { height: 300, width: 300 };
+      ? { height: 960, width: 540 } // Larger screen (portrait 9:16 ratio)
+      : { height: 480, width: 270 }; // Smaller screen (portrait 9:16 ratio)
     setRecommendedSize(size);
     fabricCanvas?.setDimensions(size);
 

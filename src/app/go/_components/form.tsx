@@ -25,9 +25,12 @@ function downloadURI(uri: string, name: string) {
   document.body.removeChild(link);
 }
 
-export default function Form({ searchParams }: Readonly<Props>) {
+export default function Form({ searchParams }: Props) {
   const { frameUrl } = searchParams;
   const canvasHook = useTwibbonCanvas();
+
+  const canvasWidth = 1080;
+  const canvasHeight = 1920;
 
   const [fileName, setFileName] = useState<string>();
   const [scale, setScale] = useState<number>(1);
@@ -51,8 +54,8 @@ export default function Form({ searchParams }: Readonly<Props>) {
     <div className="flex flex-col gap-4 bg-white p-4 rounded-md">
       <div className="flex justify-center items-center space-y-4 flex-col">
         <Canvas
-          width={canvasHook.recommendedSize.width}
-          height={canvasHook.recommendedSize.height}
+          width={canvasWidth}
+          height={canvasHeight}
           canvasid="twibbon"
           ref={canvasHook.canvasRef}
         />
